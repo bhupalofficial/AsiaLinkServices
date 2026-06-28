@@ -5,6 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    base: "./",
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
@@ -13,26 +14,8 @@ export default defineConfig(() => {
     },
     build: {
       cssMinify: true,
-      minify: 'esbuild',
-      chunkSizeWarningLimit: 1200,
-      rollupOptions: {
-        output: {
-          manualChunks(id) {
-            if (id.includes('node_modules')) {
-              if (id.includes('react') || id.includes('react-dom') || id.includes('scheduler')) {
-                return 'react-core';
-              }
-              if (id.includes('lucide-react')) {
-                return 'icons';
-              }
-              if (id.includes('motion')) {
-                return 'animations';
-              }
-              return 'vendor-libs';
-            }
-          }
-        }
-      }
+      minify: 'esbuild' as const,
+      chunkSizeWarningLimit: 1200
     },
     server: {
       // HMR is disabled in development containers via DISABLE_HMR env var.
