@@ -1,0 +1,6 @@
+{
+  "name": "Asia Link Services",
+  "description": "A premium cinematic corporate portal for Asia Link Services Pvt. Ltd. with a real-time Content Management Admin Dashboard for complete editing access, custom themes, and recruitment features.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

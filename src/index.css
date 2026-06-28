@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Fira+Code:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: "Fira Code", monospace;
+
+  /* Elevate font sizes globally across the application for high legibility */
+  --text-xs: 0.875rem;     /* 14px instead of 12px */
+  --text-sm: 1.05rem;       /* ~16.8px instead of 14px */
+  --text-base: 1.15rem;     /* ~18.4px instead of 16px */
+  --text-lg: 1.3rem;       /* 20.8px instead of 18px */
+  --text-xl: 1.55rem;      /* ~24.8px instead of 20px */
+  --text-2xl: 1.95rem;     /* ~31.2px instead of 24px */
+  --text-3xl: 2.35rem;     /* ~37.6px instead of 30px */
+  --text-4xl: 3.15rem;     /* ~50px instead of 36px */
+  --text-5xl: 3.95rem;     /* ~63px instead of 48px */
+}
+
+/* Custom micro animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+/* Centralized Font-Size Uplift for the Admin Panel */
+.admin-panel-container {
+  font-size: 1.125rem !important; /* Elevate base size by ~12.5% */
+}
+
+/* Scale text utilities nested inside the Admin Panel container for maximized legibility */
+.admin-panel-container .text-\[9px\] {
+  font-size: 0.825rem !important; /* ~13.2px */
+}
+
+.admin-panel-container .text-\[10px\] {
+  font-size: 0.875rem !important; /* ~14px */
+}
+
+.admin-panel-container .text-\[11px\] {
+  font-size: 0.95rem !important; /* ~15.2px */
+}
+
+.admin-panel-container .text-xs {
+  font-size: 1.025rem !important; /* ~16.4px (up from 12px/14px default) */
+}
+
+.admin-panel-container .text-sm {
+  font-size: 1.175rem !important; /* ~18.8px (up from 14px/16px default) */
+}
+
+.admin-panel-container .text-base {
+  font-size: 1.25rem !important; /* ~20px */
+}
+
+.admin-panel-container .text-lg {
+  font-size: 1.45rem !important; /* ~23.2px */
+}
+
+.admin-panel-container .text-xl {
+  font-size: 1.7rem !important; /* ~27.2px */
+}
+
+.admin-panel-container .text-2xl {
+  font-size: 2.15rem !important; /* ~34.4px */
+}
+
+/* Ensure form elements and control fields have highly visible and comfortable text */
+.admin-panel-container input,
+.admin-panel-container textarea,
+.admin-panel-container select {
+  font-size: 1.025rem !important; /* Matches xs/sm elevated standard */
+}
+
+.admin-panel-container label {
+  font-weight: 700 !important; /* Slightly bolder for clarity */
+}
+
