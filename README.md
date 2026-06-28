@@ -35,8 +35,8 @@ GEMINI_API_KEY="your_google_gemini_api_key"
 APP_URL="http://localhost:3000"
 
 # Optional Master Administrator Credentials
-ADMIN_EMAIL="admin@asialink.com"
-ADMIN_PASSWORD="Admin119Password!"
+ADMIN_EMAIL="admin@example.com"
+ADMIN_PASSWORD="your_secure_password"
 ```
 
 ### 3. Start the Development Server
