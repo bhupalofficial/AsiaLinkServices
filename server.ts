@@ -249,7 +249,11 @@ async function startServer() {
     assetsOurTeamDir
   ].forEach(dir => {
     if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
+      try {
+        fs.mkdirSync(dir, { recursive: true });
+      } catch (err) {
+        console.error(`Warning: Failed to create directory ${dir}:`, err);
+      }
     }
   });
 
