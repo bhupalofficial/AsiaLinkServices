@@ -3794,7 +3794,7 @@ export default function AdminPanel({ cmsData, onSaveCMS, onExit, isDark, theme }
                             <img src={member.photoUrl} alt={member.name} className="w-10 h-10 rounded-full object-cover border shrink-0" />
                           ) : (
                             <div className="w-10 h-10 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center font-extrabold text-xs shrink-0">
-                              {member.name.split(" ").map(n=>n[0]).join("")}
+                              {(member.name || "").split(" ").filter(Boolean).map(n => n[0] || "").join("")}
                             </div>
                           )}
                           <div>
