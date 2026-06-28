@@ -42,7 +42,7 @@ export default function OrgChart({ primaryBg, accentText, cardBg, themeId, teamM
                     ? "bg-gradient-to-br from-slate-800 to-slate-950 text-sky-400" 
                     : "bg-gradient-to-br from-slate-100 to-slate-200 text-[#0073aa]"
                 }`}>
-                  {member.name.split(" ").map(n => n[0]).join("")}
+                  {(member.name || "").split(" ").filter(Boolean).map(n => n[0] || "").join("")}
                 </div>
               )}
             </div>
